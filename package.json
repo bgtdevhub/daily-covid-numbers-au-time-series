@@ -1,0 +1,19 @@
+{
+  "name": "daily-covid-numbers-au-time-series",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "moment": "^2.27.0",
+    "qs": "^6.9.4"
+  },
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.1.2"
+  }
+}

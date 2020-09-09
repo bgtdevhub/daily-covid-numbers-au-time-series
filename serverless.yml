@@ -1,0 +1,28 @@
+service: daily-covid-numbers-au
+app: bgt-stuff
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-southeast-2
+  deploymentBucket:
+    name: devhub-serverless-deployment-bucket
+    serverSideEncryption: AES256
+functions:
+  # query:
+  #   timeout: 300
+  #   handler: handler.query
+  #   events:
+  #     - schedule: rate(60 minutes)
+  query-postcode:
+    timeout: 300
+    handler: handler.queryPostCode
+    events:
+      - schedule: rate(60 minutes)
+
+custom:
+  deploymentBucket:
+    versioning: true
+
+plugins:
+  - serverless-deployment-bucket

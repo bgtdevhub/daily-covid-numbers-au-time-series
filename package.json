@@ -11,10 +11,10 @@
   "dependencies": {
     "axios": "^0.19.2",
     "moment": "^2.27.0",
-    "qs": "^6.9.4"
+    "qs": "^6.9.4",
+    "convert-csv-to-json": "^1.0.0"
   },
   "devDependencies": {
-    "convert-csv-to-json": "^1.0.0",
     "serverless-deployment-bucket": "^1.1.2"
   }
 }

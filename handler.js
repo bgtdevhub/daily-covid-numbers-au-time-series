@@ -17,5 +17,6 @@ const config = {
 
 module.exports = {
   query: require('./lib/query')(config),
-  queryPostCode: require('./lib/queryPostCode')(config)
+  queryPostCodeDaily: require('./lib/queryPostCodeDaily')(config),
+  queryPostCodeTimeSeries: require('./lib/queryPostCodeTimeSeries')(config)
 }

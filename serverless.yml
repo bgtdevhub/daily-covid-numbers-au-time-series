@@ -14,11 +14,16 @@ functions:
   #   handler: handler.query
   #   events:
   #     - schedule: rate(60 minutes)
-  query-postcode:
+  query-postcode-daily:
     timeout: 300
-    handler: handler.queryPostCode
+    handler: handler.queryPostCodeDaily
     events:
-      - schedule: rate(60 minutes)
+      - schedule: rate(6 hours)
+  query-postcode-time-series:
+    timeout: 300
+    handler: handler.queryPostCodeTimeSeries
+    events:
+      - schedule: rate(4 hours)
 
 custom:
   deploymentBucket:
